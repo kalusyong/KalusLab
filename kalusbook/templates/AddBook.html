@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<table width="1300" border="0">
+<tr>
+<td colspan="2" style="background-color:#99bbbb;">
+<h1 align="center">图书管理系统</h1>
+</td>
+</tr>
+
+<tr valign="top">
+<td style="background-color:#ffff99;width:30px;text-align:top;">
+    <form action="/AddBook/">
+		<input type="submit" value = "添加图书">
+	</form>
+
+	<form action="/AddAuthor/">
+		<input type="submit" value = "添加作者">
+	</form>
+
+	<form action="/search/">
+		<input type="submit" value = "作者搜索">
+	</form>
+
+</td>
+<td style="background-color:#EEEEEE;height:500px;width:400px;text-align:top;">
+    <a href="/">返回主界面</a>
+
+	<form action = "/AddBookSuccess/" method = "post">
+		<table align="center">
+        <tr><td><h1><b>新增书目</b></h1></td></tr>
+        <tr><td><div style="color:red">以下内容均为必填</div></td></tr>
+        <tr>
+        	<td><b>ISBN：</b></td>
+        	<td><input type = "text" name = "ISBN"></td>
+		</tr>
+
+		<tr>
+        	<td><b>书名：</b></td>
+        	<td><input type = "text" name = "Title"></td>
+		</tr>
+
+		<tr>
+        	<td><b>作者编号：</b></td>
+        	<td><input type = "text" name = "AuthorID"></td>
+        </tr>
+
+        <tr>
+        	<td><b>出版社：</b></td>
+        	<td><input type = "text" name = "Publisher"></td>
+        </tr>
+
+		<tr>
+        	<td><b>出版日期：</b></td>
+        	<td><input type = "date" name = "PublicationDate">*请按照“2015-12-12”的格式输入日期</td>
+        </tr>
+
+        <tr>
+        	<td><b>价格：</b></td>
+        	<td><input type = "text" name = "price"></td>
+        </tr>
+
+		<tr align="center">
+   			<td colspan="2">
+    	    <input type="submit" value="点击添加">
+   			</td>
+   		</tr>
+        </table>
+        {% csrf_token %}
+    </form>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" style="background-color:#99bbbb;text-align:center;">
+详情咨询 Kalusyong@126.com</td>
+</tr>
+</table>
+
+</body>
+</html>
